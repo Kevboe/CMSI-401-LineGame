@@ -1,5 +1,5 @@
-###The LineGame Proposal Doc
+### The LineGame Proposal Doc
 
-#####Description
+##### Description
 
-#####Justification
+##### Justification
