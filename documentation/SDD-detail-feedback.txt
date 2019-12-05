@@ -4,14 +4,12 @@
 
 Very nice work on this document!  
 
-You have captured the architecture quite
- well and it's easy to see 
-what the parts of the application are and how they 
-fit together.
-
+You have captured the details just fine.
 
 
 Just a couple of observations:
+
+You still need to update your diagrams as I indicated last time, to wit:
 
 
 
