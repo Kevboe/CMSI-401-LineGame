@@ -11,6 +11,7 @@ export default class App extends React.Component {
     this.state = {
       move: 0,
       score: 0,
+      scoreColor: "blue",
       restart: false,
       animRunning: false,
       obstacleX1: 0,
@@ -86,6 +87,7 @@ export default class App extends React.Component {
       this.updateY2()
       this.updateY3()
       this.updateY4()
+      this.setScoreColor()
       this.collision()
     });
   }
@@ -110,6 +112,24 @@ export default class App extends React.Component {
     }
     if(this.state.obstacleX4 <= this.state.move+18 && this.state.obstacleX4+18 >= this.state.move && this.state.obstacleY4 <= 122 && this.state.obstacleY4+18 >= 105){
       this.stopAnim()
+    }
+  }
+
+  setScoreColor = () => {
+    if(this.state.score === 25){      
+      this.setState({
+        scoreColor: "purple"
+      })
+    }
+    if(this.state.score === 50){      
+      this.setState({
+        scoreColor: "red"
+      })
+    }
+    if(this.state.score === 75){      
+      this.setState({
+        scoreColor: "pink"
+      })
     }
   }
 
@@ -279,9 +299,9 @@ export default class App extends React.Component {
           />
           <Text //score text
             x="50"
-            y="-22.5"
+            y="-21.5"
             fill="none"
-            stroke="purple"
+            stroke={this.state.scoreColor}
             fontSize="18"
             fontWeight="bold"
             textAnchor="middle">
